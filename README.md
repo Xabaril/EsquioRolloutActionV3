@@ -1,4 +1,4 @@
-# Esquio (V2) Github Action rollout feature
+# Esquio (V3) Github Action rollout feature
 
 With this Esquio Github action you can enable a feature in an Github Actions workflow.[Esquio](https://esquio.readthedocs.io/en/latest/).
 
@@ -15,8 +15,8 @@ Please read [Esquio readthedocs](https://esquio.readthedocs.io/en/latest/) first
 
 ```YAML
       - name: Esquio rollout
-        uses: actions/esquio-rollout
-        id: esquio-rollout
+        uses: actions/esquio-rollout-v3
+        id: esquio-rollout-v3
         with:
           esquioUrl: 'https://esquiodemoui.azurewebsites.net/'
           esquioApiKey: ${{ secrets.apikey }}

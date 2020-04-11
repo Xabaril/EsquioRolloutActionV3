@@ -1,8 +1,8 @@
 {
-  "name": "esquio-rollout",
-  "version": "2.0.0",
+  "name": "esquio-rollout-v3",
+  "version": "3.0.0",
   "private": true,
-  "description": "Xabaril Esquio rollout action",
+  "description": "Xabaril Esquio rollout action (V3)",
   "main": "lib/main.js",
   "scripts": {
     "build": "tsc",
