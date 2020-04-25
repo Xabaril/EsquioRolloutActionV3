@@ -2,12 +2,12 @@ import * as core from '@actions/core';
 import url =  require('url'); 
 const https = require('https');
 
-async function run() {
+async function run() {  
   try {
-    const esquioUrl = core.getInput('esquioUrl');
-    const esquioApiKey = core.getInput('esquioApiKey');
-    const productName = core.getInput('productName');
-    const featureName = core.getInput('featureName');
+    const esquioUrl = core.getInput('esquio-url');
+    const esquioApiKey = core.getInput('esquio-api-key');
+    const productName = core.getInput('product-name');
+    const featureName = core.getInput('feature-name');
 
     await rolloutFeature(url.parse(esquioUrl), esquioApiKey, productName, featureName);
   } catch (error) {

@@ -5,14 +5,18 @@ branding:
   icon: 'toggle-right'  
   color: 'blue'
 inputs:
-  esquioUrl:             
+  esquio-url:             
     description: 'Esquio URL'
-  esquioApiKey:
+    required: true
+  esquio-api-key:
     description: 'Esquio API KEy (keep it secret)'
-  productName:
+    required: true
+  product-name:
     description: 'Product name'
-  featureName:
+    required: true
+  feature-name:
     description: 'Feature name'
+    required: true
 runs:
   using: 'node12'
   main: 'lib/main.js'
