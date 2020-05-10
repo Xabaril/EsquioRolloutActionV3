@@ -8,17 +8,18 @@ async function run() {
     const esquioApiKey = core.getInput('esquio-api-key');
     const productName = core.getInput('product-name');
     const featureName = core.getInput('feature-name');
+    const deploymentName = core.getInput('deployment-name');
 
-    await rolloutFeature(url.parse(esquioUrl), esquioApiKey, productName, featureName);
+    await rolloutFeature(url.parse(esquioUrl), esquioApiKey, productName, featureName, deploymentName);
   } catch (error) {
     core.setFailed(error.message);
   }
 }
 
-async function rolloutFeature(esquioUrl: url.UrlWithStringQuery, esquioApiKey: string, productName: string, featureName: string) {
+async function rolloutFeature(esquioUrl: url.UrlWithStringQuery, esquioApiKey: string, productName: string, featureName: string, deploymentName: string) {
   const options = {
       hostname: esquioUrl.host,
-      path: `/api/products/${productName}/features/${featureName}/Rollout?apikey=${esquioApiKey}`,
+      path: `/api/products/${productName}/deployments/${deploymentName}/features/${featureName}/Rollout?apikey=${esquioApiKey}`,
       method: 'PUT',
       headers: {
           'Content-Type': 'application/json',
